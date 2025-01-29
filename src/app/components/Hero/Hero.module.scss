@@ -1,0 +1,77 @@
+@use "@/styles/mixin.scss" as *;
+
+.hero {
+  position: relative;
+  height: 100dvh;
+  overflow: hidden;
+  .heroBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  .body {
+    position: relative;
+    z-index: 1;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: rem(40);
+    @media (max-width: rem(992)) {
+      padding-right: rem(16);
+      padding-bottom: rem(32);
+    }
+    .arrow {
+      position: absolute;
+      right: -20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .top {
+      display: flex;
+      align-items: flex-end;
+      column-gap: rem(80);
+      row-gap: rem(24);
+      flex-wrap: wrap;
+      h2 {
+        color: #fff;
+        font-size: rem(24);
+        font-weight: 500;
+        line-height: 1.4;
+        text-align: left;
+        margin-top: -10px;
+        @media (max-width: rem(992)) {
+          font-size: rem(18);
+        }
+      }
+      button {
+        margin-bottom: -10px;
+        @media (max-width: rem(992)) {
+          margin: 0;
+        }
+      }
+      > div {
+        @media (max-width: rem(992)) {
+          order: 3;
+        }
+      }
+    }
+    h1 {
+      width: 100%;
+      color: #fff;
+      font-size: rem(80);
+      font-weight: 700;
+      line-height: 1.4;
+      text-align: left;
+      font-family: var(--font-cabinet);
+      @media (max-width: rem(992)) {
+        font-size: rem(40);
+      }
+    }
+  }
+}

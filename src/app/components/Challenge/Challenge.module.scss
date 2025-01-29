@@ -1,0 +1,115 @@
+@use "@/styles/mixin.scss" as *;
+
+.challenges {
+  margin: rem(60) 0;
+  .body {
+    display: flex;
+    @media (max-width: rem(992)) {
+      flex-direction: column;
+    }
+    .title {
+      width: 35%;
+      display: flex;
+      align-items: flex-end;
+      padding: rem(26) rem(40);
+      background: #b3a68e;
+      color: #fff;
+      height: rem(522);
+      position: relative;
+      @media (max-width: rem(992)) {
+        padding: rem(40) rem(16);
+        width: 100%;
+        height: auto;
+      }
+      h2 {
+        color: #fff;
+        font-size: rem(58);
+        font-weight: 500;
+        line-height: 1.4;
+        text-align: left;
+        @media (max-width: rem(992)) {
+          width: 100%;
+          font-size: rem(32);
+          br {
+            display: none;
+          }
+        }
+      }
+    }
+    .sliderWrap {
+      width: 65%;
+      background: #f4f1ec;
+      @media (max-width: rem(992)) {
+        width: 100%;
+      }
+      > div {
+        height: 100%;
+
+        .slideInner {
+          background: #f4f1ec;
+          display: flex;
+          align-items: center;
+          height: 100%;
+          @media (max-width: rem(992)) {
+            flex-direction: column;
+          }
+          .image {
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            width: 38%;
+            @media (max-width: rem(992)) {
+              width: 100%;
+              height: rem(250);
+            }
+          }
+          .content {
+            width: 62%;
+            padding: rem(110) rem(40);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            @media (max-width: rem(992)) {
+              width: 100%;
+              padding: rem(40) rem(24);
+              flex-grow: 1;
+            }
+            h3 {
+              color: #000000;
+              font-size: rem(32);
+              font-weight: 500;
+              line-height: 1.3;
+              text-align: left;
+              margin-bottom: rem(16);
+            }
+            p {
+              color: #000000;
+              font-size: rem(16);
+              font-weight: 400;
+              line-height: 1.3;
+              text-align: left;
+              margin-bottom: rem(16);
+            }
+            .navigation {
+              display: flex;
+              gap: rem(4);
+            }
+            .bottomLine {
+              display: flex;
+              height: rem(4);
+              width: 100%;
+              background: #d9d9d9;
+              > span {
+                display: flex;
+                height: rem(4);
+                width: 50%;
+                background: #111111;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
