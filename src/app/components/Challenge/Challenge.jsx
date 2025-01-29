@@ -83,6 +83,14 @@ const Challenge = () => {
                       className={styles.image}
                       style={{ backgroundImage: `url(${challenge.image})` }}
                     ></div>
+                    {/**<Image
+                      src={challenge.image}
+                      width={318}
+                      height={522}
+                      alt={challenge.title}
+                      className={styles.image}
+                      quality={100}
+                    /> */}
                     <div className={styles.content}>
                       <div>
                         <h3
