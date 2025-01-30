@@ -8,22 +8,22 @@ import RequestButton from "../LearnMoreButton/RequestButton";
 
 const Hero = () => {
   const sectionRef = useRef(null);
-  const { scrollYProgress } = useScroll({
+  /**const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end start"],
   });
 
-  const yBackground = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const yBackground = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]); */
 
   return (
     <section ref={sectionRef} className={styles.hero}>
-      <motion.div
+      {/**<motion.div
         className={styles.heroBackground}
         style={{
           y: yBackground,
           backgroundImage: "url('/images/hero.webp')",
         }}
-      />
+      /> */}
 
       <div className="_container">
         <div className={styles.body}>

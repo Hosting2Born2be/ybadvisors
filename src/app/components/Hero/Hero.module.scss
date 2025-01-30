@@ -4,6 +4,10 @@
   position: relative;
   height: 100dvh;
   overflow: hidden;
+  background-image: url("/images/hero.webp");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top center;
   .heroBackground {
     position: absolute;
     top: 0;
@@ -12,6 +16,7 @@
     height: 100%;
     background-size: cover;
     background-position: center;
+    display: none;
   }
   .body {
     position: relative;
