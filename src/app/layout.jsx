@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import "@/styles/base.scss";
 import Footer from "./components/Footer/Footer";
+import Preloader from "./components/Preloader";
 
 const cabinet = localFont({
   src: [
@@ -122,6 +123,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${satoshi.variable} ${cabinet.variable}`}>
+        <Preloader />
         <main>{children}</main>
         <Footer />
       </body>
