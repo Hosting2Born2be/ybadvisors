@@ -6,6 +6,7 @@ import Challenge from "./components/Challenge/Challenge";
 import WhySection from "./components/WhySection/WhySection";
 import HowWeSolve from "./components/HowWeSolve/HowWeSolve";
 import OurServices from "./components/OurServices/OurServices";
+import SmoothScroll from "./components/SmoothScroll";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <OurServices />
       <ContactUs />
       <CallRequest />
+      <SmoothScroll />
     </>
   );
 }
