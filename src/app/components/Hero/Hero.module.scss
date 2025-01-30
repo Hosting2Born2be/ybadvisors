@@ -2,12 +2,15 @@
 
 .hero {
   position: relative;
-  height: 100dvh;
+  height: 100vh;
   overflow: hidden;
   background-image: url("/images/hero.webp");
   background-attachment: fixed;
   background-size: cover;
   background-position: top center;
+  @media (max-width: rem(767)) {
+    background-image: url("/images/heroMob.webp");
+  }
   .heroBackground {
     position: absolute;
     top: 0;
