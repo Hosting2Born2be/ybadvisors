@@ -87,6 +87,9 @@
       font-family: var(--font-cabinet);
       @media (max-width: rem(992)) {
         font-size: rem(40);
+        br{
+          display: none;
+        }
       }
     }
   }

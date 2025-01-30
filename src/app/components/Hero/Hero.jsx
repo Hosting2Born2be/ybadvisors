@@ -55,7 +55,8 @@ const Hero = () => {
               </h2>
               <RequestButton text={"Request a Call"} classValue={"white"} />
               <h1>
-                Financial Expertise You Can Rely On, Every Step of the Way
+                Financial Expertise You Can <br />
+                Rely On, Every Step of the Way
               </h1>
             </motion.div>
           </div>
