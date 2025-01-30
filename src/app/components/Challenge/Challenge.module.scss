@@ -16,6 +16,7 @@
       color: #fff;
       height: rem(522);
       position: relative;
+
       @media (max-width: rem(992)) {
         padding: rem(40) rem(16);
         width: 100%;
@@ -27,6 +28,9 @@
         font-weight: 500;
         line-height: 1.4;
         text-align: left;
+        @media (max-width: rem(1100)) {
+          font-size: rem(40);
+        }
         @media (max-width: rem(992)) {
           width: 100%;
           font-size: rem(32);

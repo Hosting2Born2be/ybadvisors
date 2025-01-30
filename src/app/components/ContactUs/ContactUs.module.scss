@@ -42,6 +42,9 @@
             line-height: 1.4;
             text-align: left;
             margin-bottom: rem(24);
+            @media (max-width: rem(1100)) {
+              font-size: rem(40);
+            }
             @media (max-width: rem(992)) {
               width: 100%;
               font-size: rem(32);
@@ -187,6 +190,10 @@
             line-height: 1.4;
             text-align: left;
             width: 62%;
+            @media (max-width: rem(1100)) {
+              font-size: rem(40);
+              width: 100%;
+            }
             @media (max-width: rem(992)) {
               width: 100%;
               font-size: rem(32);
