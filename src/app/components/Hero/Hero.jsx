@@ -19,9 +19,11 @@ const Hero = () => {
     <section ref={sectionRef} className={styles.hero}>
       <div
         className={styles.heroBackground}
-        style={{
-          //backgroundImage: "url('/images/hero.webp')",
-        }}
+        style={
+          {
+            //backgroundImage: "url('/images/hero.webp')",
+          }
+        }
       />
       {/**<motion.div
         className={styles.heroBackground}
@@ -53,7 +55,7 @@ const Hero = () => {
               </h2>
               <RequestButton text={"Request a Call"} classValue={"white"} />
               <h1>
-                Expert Financial and Accounting Advisory for Your Business
+                Financial Expertise You Can Rely On, Every Step of the Way
               </h1>
             </motion.div>
           </div>
