@@ -7,7 +7,7 @@ export const metadata = {
   title: "Refund Policy | YB Advisors",
   openGraph: {
     title: "Refund Policy | YB Advisors",
-    //images: "",
+    images: "https://ybadvisors.li/images/meta.png",
   },
 };
 

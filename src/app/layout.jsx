@@ -94,11 +94,27 @@ const satoshi = localFont({
 
 export const metadata = {
   title: "Accounting, Taxation, and Compliance | YB Advisors",
-  description: "Simplify your financial operations and ensure compliance with expert accounting and taxation services. Contact us today for tailored solutions.",
+  description:
+    "Simplify your financial operations and ensure compliance with expert accounting and taxation services. Contact us today for tailored solutions.",
   openGraph: {
     title: "Accounting, Taxation, and Compliance | YB Advisors",
-    description: "Simplify your financial operations and ensure compliance with expert accounting and taxation services. Contact us today for tailored solutions.",
-    //images: "",
+    description:
+      "Simplify your financial operations and ensure compliance with expert accounting and taxation services. Contact us today for tailored solutions.",
+    images: "https://ybadvisors.li/images/meta.png",
+  },
+  icons: {
+    icon: [
+      {
+        media: "(prefers-color-scheme: light)",
+        url: "/images/icon_light.png",
+        href: "/images/icon_light.png",
+      },
+      {
+        media: "(prefers-color-scheme: dark)",
+        url: "/images/icon_dark.png",
+        href: "/images/icon_dark.png",
+      },
+    ],
   },
 };
 

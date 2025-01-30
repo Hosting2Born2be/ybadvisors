@@ -7,7 +7,7 @@ export const metadata = {
   title: "Cookie Policy | YB Advisors",
   openGraph: {
     title: "Cookie Policy | YB Advisors",
-    //images: "",
+    images: "https://ybadvisors.li/images/meta.png",
   },
 };
 

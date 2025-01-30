@@ -7,7 +7,7 @@ export const metadata = {
   title: "Terms of Use | YB Advisors",
   openGraph: {
     title: "Terms of Use | YB Advisors",
-    //images: "",
+    images: "https://ybadvisors.li/images/meta.png",
   },
 };
 
