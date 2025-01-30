@@ -6,6 +6,11 @@ import Footer from "./components/Footer/Footer";
 const cabinet = localFont({
   src: [
     {
+      path: "./fonts/CabinetGrotesk-Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
       path: "./fonts/CabinetGrotesk-Medium.otf",
       weight: "500",
       style: "normal",
@@ -86,6 +91,16 @@ const satoshi = localFont({
   display: "swap",
   variable: "--font-satoshi",
 });
+
+export const metadata = {
+  title: "YB Advisors",
+  description: "",
+  openGraph: {
+    title: "YB Advisors",
+    description: "",
+    //images: "",
+  },
+};
 
 export default function RootLayout({ children }) {
   return (

@@ -1,0 +1,120 @@
+@use "@/styles/mixin.scss" as *;
+
+.ourServices {
+  margin: rem(60) 0;
+  .body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    @media (max-width: rem(992)) {
+      gap: rem(40);
+    }
+    .col1 {
+      width: 45%;
+      position: sticky;
+      top: 0;
+      @media (max-width: rem(992)) {
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        position: relative;
+        top: unset;
+      }
+      h2 {
+        font-family: var(--font-cabinet);
+        font-size: rem(80);
+        font-weight: 500;
+        line-height: 1.3;
+        text-align: left;
+        @media (max-width: rem(992)) {
+          font-size: rem(32);
+        }
+      }
+      > div {
+        button {
+          @media (max-width: rem(992)) {
+            width: 200px;
+            margin-bottom: -8px;
+          }
+          &:hover {
+            @media (max-width: rem(992)) {
+              > div {
+                left: -66px;
+                svg {
+                  border-radius: rem(8);
+                }
+                span {
+                }
+              }
+            }
+          }
+          span {
+            color: #000;
+          }
+          > div {
+            > div {
+              &:first-child {
+                background: #000;
+                svg {
+                  path {
+                    fill: #fff;
+                  }
+                }
+              }
+              &:last-child {
+                width: rem(24);
+                margin-left: rem(10);
+                svg {
+                  path {
+                    fill: #000;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .col2 {
+      width: 55%;
+      display: flex;
+      flex-direction: column;
+      gap: rem(24);
+      @media (max-width: rem(992)) {
+        width: 100%;
+      }
+      .accordionItem {
+        cursor: pointer;
+        padding-bottom: rem(16);
+        border-bottom: 1px solid #d1d5db;
+        .accordionTitle {
+          font-family: var(--font-cabinet);
+          font-size: rem(40);
+          font-weight: 400;
+          line-height: 1.2;
+          text-align: left;
+          @media (max-width: rem(992)) {
+            font-size: rem(24);
+          }
+        }
+        .accordionContent {
+          overflow: hidden;
+          transition: all 0.3s ease-in-out;
+          > div {
+            font-size: rem(20);
+            font-weight: 400;
+            line-height: 1.3;
+            text-align: left;
+            @media (max-width: rem(992)) {
+              font-size: rem(14);
+            }
+            b {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

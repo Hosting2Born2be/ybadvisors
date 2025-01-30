@@ -151,13 +151,7 @@ const CallRequest = () => {
       }`}
     >
       <div className={styles.callRequestContainer}>
-        <div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeInUp}
-          className={styles.body}
-        >
+        <div className={styles.body}>
           <Formik
             initialValues={initialValues}
             validationSchema={validationSchema}
@@ -170,7 +164,7 @@ const CallRequest = () => {
               touched,
               errors,
               resetForm,
-              values
+              values,
             }) => (
               <div className={styles.formWrap}>
                 <button
