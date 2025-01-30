@@ -1,6 +1,6 @@
 import { getPage, getPageSlugs } from "@/utils/blogUtils";
 import React from "react";
-import "@/styles/policy.scss";
+import styles from "../Policy.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -22,7 +22,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params: { locale } }) {
   const page = await getPage("cookie-policy", locale);
-  const pageTitle = `${page.title} | Airis`;
+  const pageTitle = `${page.title} | YB Advisors`;
   return {
     title: pageTitle,
     openGraph: {
@@ -36,41 +36,17 @@ const TermsAndConditions = async () => {
   const page = await getPage("cookie-policy");
   return (
     <>
-      <section className="policy-hero">
-        <img src="/images/about/ellipse1.png" />
+      <section className={styles.policyHero}>
         <div className="_container">
-          <div className="policy-hero__body">
-            <div>
-              <Image
-                alt="hero1"
-                src={"/images/standarts/hero1.png"}
-                width={330}
-                height={300}
-              />
-            </div>
-            <div>
-              <h1>{page.title}</h1>
-              {page.date ? <h2>Date: {page.date}</h2> : ""}
-            </div>
-            <div>
-              <Image
-                alt="hero1"
-                src={"/images/standarts/hero2.png"}
-                width={330}
-                height={300}
-              />
-            </div>
-          </div>
+          <h1>{page.title}</h1>
         </div>
       </section>
-      <section className="policy">
+      <section className={styles.policy}>
         <div className="_container">
-          <div className="policy__body">
-            <article
-              dangerouslySetInnerHTML={{ __html: page.body }}
-              className="policy__content"
-            />
-          </div>
+          <article
+            dangerouslySetInnerHTML={{ __html: page.body }}
+            className={styles.content}
+          />
         </div>
       </section>
     </>

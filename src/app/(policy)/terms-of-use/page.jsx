@@ -22,7 +22,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params: { locale } }) {
   const page = await getPage("terms-of-use", locale);
-  const pageTitle = `${page.title} | Airis`;
+  const pageTitle = `${page.title} | YB Advisors`;
   return {
     title: pageTitle,
     openGraph: {
