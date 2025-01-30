@@ -95,7 +95,14 @@
         @media (max-width: rem(992)) {
           flex-direction: column;
         }
-
+        .formBottom {
+          display: flex;
+          align-items: center;
+          gap: rem(16);
+          > img {
+            width: rem(20);
+          }
+        }
         button {
           display: block;
           overflow: hidden;

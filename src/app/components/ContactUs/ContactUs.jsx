@@ -128,11 +128,29 @@ const ContactUs = () => {
     values,
     { setSubmitting, resetForm, setStatus }
   ) => {
-    setTimeout(() => {
+    try {
+      const response = await fetch("/api/request", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (response.ok) {
+        setTimeout(() => {
+          setSubmitting(false);
+          resetForm();
+          setStatus({ success: true });
+        }, 400);
+      } else {
+        setStatus({ success: false });
+      }
+    } catch (error) {
+      //console.error(error);
+      setStatus({ success: false });
       setSubmitting(false);
-      resetForm();
-      setStatus({ success: true });
-    }, 400);
+    }
   };
 
   return (
@@ -150,7 +168,14 @@ const ContactUs = () => {
             validationSchema={validationSchema}
             onSubmit={handleSubmit}
           >
-            {({ isSubmitting, status, setFieldValue, touched, errors, values }) => (
+            {({
+              isSubmitting,
+              status,
+              setFieldValue,
+              touched,
+              errors,
+              values,
+            }) => (
               <div className={styles.formWrap}>
                 <Form>
                   {!status && (
@@ -322,30 +347,32 @@ const ContactUs = () => {
                               className={styles.error}
                             />
                           </div>
-                          <button
-                            type="submit"
-                            disabled={isSubmitting}
-                            className={styles.orderButton}
-                          >
-                            <div>
-                              <div className={styles.circle}>
-                                <ButtonArrow />
+
+                          <div className={styles.formBottom}>
+                            <button
+                              type="submit"
+                              disabled={isSubmitting}
+                              className={styles.orderButton}
+                            >
+                              <div>
+                                <div className={styles.circle}>
+                                  <ButtonArrow />
+                                </div>
+                                <span>Submit</span>
+                                <div className={styles.circleTransparent}>
+                                  <ButtonArrow />
+                                </div>
                               </div>
-                              <span>Submit</span>
-                              <div className={styles.circleTransparent}>
-                                <ButtonArrow />
-                              </div>
-                            </div>
-                          </button>
+                            </button>
+                            {isSubmitting && (
+                              <img src="/images/loading.svg" alt="Loading" />
+                            )}
+                          </div>
                         </div>
                       </div>
                     </>
                   )}
-                  {isSubmitting && (
-                    <div className={styles.loading}>
-                      <img src="/images/loading.svg" alt="Loading" />
-                    </div>
-                  )}
+
                   {status && status.success && (
                     <div className={styles.success}>
                       <div className={styles.title}>

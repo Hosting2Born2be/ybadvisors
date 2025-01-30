@@ -10,7 +10,7 @@ export async function getPost(slug, locale) {
     fileSlug = `DE-${slug}`;
   }
 
-  const text = await readFile(`./src/lib/resources/${fileSlug}.md`, "utf8");
+  const text = await readFile(`./src/lib/resources/${fileSlug}.mdx`, "utf8");
   const {
     content,
     data: { title, excerpt, short_description, seo_title, seo_description, thumbnail, subtitle },
@@ -22,8 +22,8 @@ export async function getPost(slug, locale) {
 export async function getSlugs() {
   const files = await readdir("./src/lib/resources");
   return files
-    .filter((file) => file.endsWith(".md"))
-    .map((file) => file.slice(0, -".md".length));
+    .filter((file) => file.endsWith(".mdx"))
+    .map((file) => file.slice(0, -".mdx".length));
 }
 
 export async function getPosts(locale = "en") {
@@ -50,7 +50,7 @@ export async function getPage(slug, locale) {
     fileSlug = `DE-${slug}`;
   }
 
-  const text = await readFile(`./src/lib/policies/${fileSlug}.md`, "utf8");
+  const text = await readFile(`./src/lib/policies/${fileSlug}.mdx`, "utf8");
   const {
     content,
     data: { title, date },
@@ -62,6 +62,6 @@ export async function getPage(slug, locale) {
 export async function getPageSlugs() {
   const files = await readdir("./src/lib/policies/");
   return files
-    .filter((file) => file.endsWith(".md"))
-    .map((file) => file.slice(0, -".md".length));
+    .filter((file) => file.endsWith(".mdx"))
+    .map((file) => file.slice(0, -".mdx".length));
 }

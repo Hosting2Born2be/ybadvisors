@@ -18,7 +18,6 @@ export default function Home() {
       <OurServices />
       <ContactUs />
       <CallRequest />
-      <SmoothScroll />
     </>
   );
 }

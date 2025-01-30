@@ -45,8 +45,8 @@
           right: rem(24);
           //top: rem(30);
           color: #fff;
-          svg{
-            path{
+          svg {
+            path {
               fill: #fff;
             }
           }
@@ -148,7 +148,14 @@
           height: auto;
           min-height: 100%;
         }
-
+        .formBottom {
+          display: flex;
+          align-items: center;
+          gap: rem(16);
+          > img {
+            width: rem(20);
+          }
+        }
         button {
           display: block;
           overflow: hidden;
