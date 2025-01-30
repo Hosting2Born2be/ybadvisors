@@ -172,10 +172,6 @@ const CookiePolicy = () => {
                   .&nbsp;
                 </li>
               </ul>
-              <p>
-                <br />
-                <br />
-              </p>
               <h2
                 id="third-party-cookies"
                 ref={sectionRefs.current["third-party-cookies"]}
