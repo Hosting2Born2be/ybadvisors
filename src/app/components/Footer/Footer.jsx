@@ -1,11 +1,72 @@
 import React from "react";
+import styles from "./Footer.module.scss";
+import Link from "next/link";
+import ButtonArrow from "@/icons/ButtonArrow";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
-    <section className="footer">
+    <section className={styles.footer}>
       <div className="_container">
-        <div className="copy">
+        <div className={styles.body}>
+          <div className={styles.col1}>
+            <h3>Company</h3>
+            <div className={styles.company}>
+              <h4>YB Advisors Ltd.</h4>
+              <p>
+                Your partner in accounting, taxation, and <br />
+                compliance.
+              </p>
+            </div>
+            <div className={styles.addresses}>
+              <div>
+                <span>Registered Address:</span>
+                <h4>
+                  Schaanerstrasse 99, <br />
+                  Vaduz, Postal Code: 9490, <br />
+                  Liechtenstein
+                </h4>
+              </div>
+              <div>
+                <span>Registration Number:</span>
+                <h4>FL-0002.730.986-1</h4>
+              </div>
+            </div>
+          </div>
+          <div className={styles.col2}>
+            <h3>Contact us</h3>
+            <div>
+              <span>Email</span>
+              <Link href="mailto:office@ybadvisors.li">
+                office@ybadvisors.li
+              </Link>
+            </div>
+            <div>
+              <span>Join us on</span>
+              <Link href="#">
+                Linkedin <ButtonArrow />
+              </Link>
+            </div>
+          </div>
+          <div className={styles.col3}>
+            <h3>Legal</h3>
+            <div className={styles.legal}>
+              <Link href="/terms-of-use">
+                Terms of Use <ButtonArrow />
+              </Link>
+              <Link href="/privacy-policy">
+                Privacy Policy <ButtonArrow />
+              </Link>
+              <Link href="/cookie-policy">
+                Cookie Policy <ButtonArrow />
+              </Link>
+              <Link href="/refund-policy">
+                Refund Policy <ButtonArrow />
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div className={styles.copy}>
           © {currentYear} YB Advisors Ltd. All rights reserved.
         </div>
       </div>

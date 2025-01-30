@@ -38,11 +38,14 @@ const TermsAndConditions = async () => {
     <>
       <section className={styles.policyHero}>
         <div className="_container">
-          <h1>{page.title}</h1>
+          <Link href={"/"}>
+            <img src="/images/logo.svg" alt="logo" />
+          </Link>
         </div>
       </section>
       <section className={styles.policy}>
         <div className="_container">
+          <h1>{page.title}</h1>
           <article
             dangerouslySetInnerHTML={{ __html: page.body }}
             className={styles.content}
