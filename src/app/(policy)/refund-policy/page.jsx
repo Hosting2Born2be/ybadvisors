@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "../Policy.module.scss";
 import Link from "next/link";
-import TermsOfUse from "./components/TermsOfUse";
+import Refund from "./components/Refund";
 
 export const metadata = {
-  title: "Terms of Use | YB Advisors",
+  title: "Refund Policy | YB Advisors",
   openGraph: {
-    title: "Terms of Use | YB Advisors",
+    title: "Refund Policy | YB Advisors",
     //images: "",
   },
 };
@@ -21,7 +21,7 @@ const TermsAndConditions = () => {
           </Link>
         </div>
       </section>
-      <TermsOfUse />
+      <Refund />
     </>
   );
 };

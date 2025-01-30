@@ -10,7 +10,9 @@ const Footer = () => {
       <div className="_container">
         <div className={styles.body}>
           <div className={styles.col1}>
-            <h3>Company</h3>
+            <Link href="/" className={styles.logo}>
+              <img src="/images/logo_black.svg" />
+            </Link>
             <div className={styles.company}>
               <h4>YB Advisors Ltd.</h4>
               <p>
