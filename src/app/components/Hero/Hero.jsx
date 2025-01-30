@@ -17,6 +17,12 @@ const Hero = () => {
 
   return (
     <section ref={sectionRef} className={styles.hero}>
+      <div
+        className={styles.heroBackground}
+        style={{
+          //backgroundImage: "url('/images/hero.webp')",
+        }}
+      />
       {/**<motion.div
         className={styles.heroBackground}
         style={{
