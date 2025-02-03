@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Footer.module.scss";
 import Link from "next/link";
 import ButtonArrow from "@/icons/ButtonArrow";
+import LinkedinIcon from "@/icons/socials/LinkedinIcon";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -25,7 +26,7 @@ const Footer = () => {
                 <span>Registered Address:</span>
                 <h4>
                   Schaanerstrasse 99, <br />
-                  Vaduz, Postal Code: 9490, <br />
+                  Vaduz, 9490, <br />
                   Liechtenstein
                 </h4>
               </div>
@@ -43,11 +44,22 @@ const Footer = () => {
                 office@ybadvisors.li
               </Link>
             </div>
-            <div>
-              <span>Join us on</span>
-              <Link href="#">
-                Linkedin <ButtonArrow />
-              </Link>
+            <div className={styles.founderSection}>
+              <span>Founder & CEO</span>
+              <div>
+                <Link href="https://search.app/LTaVD7unHtr2fKNb7" className={styles.link}>
+                  <div className={styles.socialContainer}>
+                    <LinkedinIcon />
+                  </div>
+                  Boris Yelevich
+                </Link>
+                <Link href="https://www.linkedin.com/company/yb-advisors/" className={styles.link}>
+                  <div className={styles.socialContainer}>
+                    <LinkedinIcon />
+                  </div>
+                  YB Advisors
+                </Link>
+              </div>
             </div>
           </div>
           <div className={styles.col3}>
