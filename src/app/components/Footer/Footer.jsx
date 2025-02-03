@@ -47,13 +47,13 @@ const Footer = () => {
             <div className={styles.founderSection}>
               <span>Founder & CEO</span>
               <div>
-                <Link href="https://search.app/LTaVD7unHtr2fKNb7" className={styles.link}>
+                <Link href="https://search.app/LTaVD7unHtr2fKNb7" target="_blank" className={styles.link}>
                   <div className={styles.socialContainer}>
                     <LinkedinIcon />
                   </div>
                   Boris Yelevich
                 </Link>
-                <Link href="https://www.linkedin.com/company/yb-advisors/" className={styles.link}>
+                <Link href="https://www.linkedin.com/company/yb-advisors/" target="_blank" className={styles.link}>
                   <div className={styles.socialContainer}>
                     <LinkedinIcon />
                   </div>
