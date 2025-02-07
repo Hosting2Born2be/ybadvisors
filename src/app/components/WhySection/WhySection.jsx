@@ -12,15 +12,15 @@ const WhySection = () => {
     },
     {
       title: "Tailored <br/>Solutions",
-      text: "20+ years in financial consulting and compliance.",
-    },
-    {
-      title: "Reliable <br/>Support",
-      text: "Ongoing assistance to your financial systems efficiency.",
+      text: "Customized strategies based on your business needs.",
     },
     {
       title: "Global <br/>Reach",
       text: "Expertise in cross-jurisdictional financial matters.",
+    },
+    {
+      title: "Reliable <br/>Support",
+      text: "Ongoing assistance to your financial systems efficiency.",
     },
   ];
 
