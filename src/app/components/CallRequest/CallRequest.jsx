@@ -15,7 +15,7 @@ import CloseIcon from "@/icons/CloseIcon";
 import Select from "react-select";
 
 const CallRequest = () => {
-  const { requestPopupDisplay, setRequestPopupDisplay, plansValue } =
+  const { requestPopupDisplay, setRequestPopupDisplay } =
     usePopupStore();
   const countryCode = useCountryCode();
 
